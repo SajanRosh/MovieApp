@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie App</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    
+    <div class="headers">
+        <img src="netflix-logo.png" class="logos" alt="">
+        <h2 class="text-neutral-300 text-3xl font-bold">Search unlimited movies, TV shows and more</h2>
+        <p class="text-neutral-400 text-lg mt-2">Ready to watch? Enter your movie name to check if its a good choice</p>
+        <div class="flex mt-5">
+            <input type="text" placeholder="Search a movie..." id="movieName" class="inputs">
+            <button class="btn" onclick="search()">Search Movie</button>
+        </div>
+    </div>
+    <div id="container" class="mx-auto mt-16 w-[700px]">
+        <div class="flex text-neutral-300 gap-10">
+            <div>
+                <h1 id="title" class="text-2xl font-bold"></h1>
+                <p class="my-1 mt-2">Genre: <span id="genre" class="text-neutral-200"></span></p>
+                <p id="desc" class="text-md text-neutral-300 mt-2"></p>
+                <p class="my-1">Actors: <span id="actors" class="text-neutral-200"></span></p>
+                <p class="my-1">Directors: <span id="directors" class="text-neutral-200"></span></p>
+                <p class="my-1">Awards: <span id="awards" class="text-neutral-200"></span></p>
+                <p class="my-1">Box office collection: <span id="collection" class="text-neutral-200"></span></p>
+                <p class="my-1">Languages: <span id="ln" class="text-neutral-200"></span></p>
+                <p class="my-1">IMDB Ratings: <span id="rating" class="text-neutral-200"></span></p>
+            </div>
+            <div class="banner">
+                <img id="poster" class="rounded-xl" src="https://m.media-amazon.com/images/M/MV5BODUwNDNjYzctODUxNy00ZTA2LWIyYTEtMDc5Y2E5ZjBmNTMzXkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_SX300.jpg" alt="">
+                <div class="suggestion">Worth Watching</div>
+            </div>
+        </div>
+    </div>
+
+    <h1 class="text-3xl font-bold text-center text-neutral-100 my-36" id="error"></h1>
+
+    <script src="app.js"></script>
+</body>
+</html>
